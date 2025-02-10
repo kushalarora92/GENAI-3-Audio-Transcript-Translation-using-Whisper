@@ -1,0 +1,42 @@
+<!-- complete HTML that accepts a form with one file and one text called language -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Transcript Translation</title>
+    <!-- add styling to support everything in the form -->
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            margin-top: 10px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio Transcript Translation</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="text" name="language" placeholder="Language">
+        <button type="submit">Translate</button>
+    </form>
+</body>
+</html>
