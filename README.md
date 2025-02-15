@@ -112,10 +112,10 @@ TEST the lambda function with the following test event:
 ```
 
 6. Create API Gateway Console
-  - Select your API
+  - Select your API / Create new API [REST API]
   - Go to Resources
   - Create a new resource:
-    - Resource Name: proxy
+    - Resource Name: {proxy+}
     - Resource Path: {proxy+}  (important: include the plus sign)
     - Enable CORS: ✓
   - Create ANY method under {proxy+}:
@@ -127,6 +127,8 @@ TEST the lambda function with the following test event:
     - Select the root (/)
     - Create ANY method
     - Same settings as above
+  - [WEIRD] DELETE THE ROOT PATH METHODS JUST CREATED
+
   - Deploy the API
     - Click Actions → Deploy API
     - Select deployment stage (or create new)
@@ -149,7 +151,7 @@ TEST the lambda function with the following test event:
     - Domain name: complete prefix.domain.com
     - Validation method: DNS validation - recommended
     - Click "Request certificate"
-    - Create CNAME record in Route 53 with an available button
+    - Create "CNAME records in Route 53" button for validation
 
 8. Create a Custom Domain Name in API Gateway
   - In API Gateway Console
